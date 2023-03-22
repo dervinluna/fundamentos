@@ -1,0 +1,6 @@
+<link rel="stylesheet" [href]="sanitizer.bypassSecurityTrustResourceUrl(CSSURL)">
+<table>
+  <tr *ngFor="let item of cursos; let primero=first; let ultimo=last;" [ngClass]="{azul:primero, naranja:ultimo}">
+    <td>{{item}}</td>
+  </tr>
+</table>
