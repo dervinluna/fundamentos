@@ -1,0 +1,51 @@
+<div class="container-fluid text-center">
+  <div class="container">
+    <div class="col-auto p-5">
+
+      <h1>NUEVO USUARIO</h1>
+    </div>
+    <br><br>
+      <form [formGroup]="formularioUsuario" (ngSubmit)="guardarFormulario()">
+        <input type="text" formControlName="usuario" placeholder="Usuario" class="form-control">
+<div class="alert-danger"
+*ngIf="formularioUsuario.get('usuario').invalid &&
+(formularioUsuario.get('usuario').dirty || formularioUsuario.get('usuario').touched)">
+<div class="container-error-message"
+*ngIf="formularioUsuario.get('usuario').errors.required">
+*Campo usuario obligatorio
+</div>
+<div class="container-error-message"
+*ngIf="formularioUsuario.get('usuario').errors.minlength">
+*Mínimo 5 carácteres
+</div>
+</div>
+<input type="text" formControlName="email" placeholder="E-mail" class="form-control"> <div class="alert-danger"
+*ngIf="formularioUsuario.get('email').invalid &&
+(formularioUsuario.get('email').dirty || formularioUsuario.get('email').touched)">
+<div class="container-error-message"
+*ngIf="formularioUsuario.get('email').errors.required">
+*Campo E-mail obligatorio
+</div>
+<div class="container-error-message"
+*ngIf="(formularioUsuario.get('email').dirty || formularioUsuario.get('email').touched) && formularioUsuario.get('email').invalid && formularioUsuario.get('email').errors.pattern">
+*E-mail no es valido
+</div>
+</div>
+<input type="password" formControlName="pass" placeholder="Contraseña" class="form-control"> <div class="alert-danger"
+*ngIf="formularioUsuario.get('pass').invalid &&
+(formularioUsuario.get('pass').dirty || formularioUsuario.get('pass').touched)">
+<div class="container-error-message"
+*ngIf="formularioUsuario.get('pass').errors.required">
+*Campo contraseña obligatorio
+</div>
+</div>
+
+        <button  type="submit" class="btn btn-primary btn-lg" [disabled]="!formularioUsuario.valid">Registrar</button>
+
+      </form>
+
+
+  </div>
+
+</div>
+

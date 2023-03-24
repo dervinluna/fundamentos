@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="text-primary">
+            <h1>PIPES</h1>
+        </div>
+        <br>
+        <table class="table table-striped">
+            <thead>
+            <tr class="text-info">
+                <th class="fs-5" scope="col">Variable</th>
+                <th class="fs-5" scope="col">Pipe</th>
+                <th class="fs-5" scope="col">Resultado</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>UpperCase</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{tituloLibro}}</td>
+                    <td>LowerCase</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{tituloLibro}}</td>
+                    <td>TitleCase</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{array}}</td>
+                    <td>Slice</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{pi}}</td>
+                    <td>Decimal</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{porcentaje}}</td>
+                    <td>Percent</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{moneda}}</td>
+                    <td>Currency</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{saludo}}</td>
+                    <td>Async</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>Date</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>JSON</h2>
+        <div class="text-primary">
+            <pre>
+              {{bombillas | json }}
+            </pre>
+        </div>
+        <h2>PIPE PERSONALIZADO</h2>
+        <div class="text-primary">
+            <pre>
+              {{cadenaBombilla | miPipe: 'LED' }}
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

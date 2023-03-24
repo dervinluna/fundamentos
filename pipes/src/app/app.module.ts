@@ -3,19 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClienteComponent } from './cliente/cliente.component';
-import { FormsModule } from "@angular/forms";
+import { MiPipePipe } from './pipes/mi-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteComponent
+    MiPipePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
+  exports:[MiPipePipe],
   providers: [],
   bootstrap: [AppComponent]
 })

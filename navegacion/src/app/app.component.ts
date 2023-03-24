@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ejercicio1';
-
-  nombreCliente = "Dervin";
-  apellidoCliente = "Luna";
-  direccionCliente = "Aldea El Chupadero";
+  title = 'navegacion';
+  mostrarSubMenu = false;
 }
